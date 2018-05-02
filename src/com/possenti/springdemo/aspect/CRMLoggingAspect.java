@@ -1,4 +1,4 @@
-package com.possenti.springdemo.aspect;
+/*package com.possenti.springdemo.aspect;
 
 import java.util.logging.Logger;
 
@@ -52,3 +52,4 @@ public class CRMLoggingAspect {
 	}
 	
 }
+*/
