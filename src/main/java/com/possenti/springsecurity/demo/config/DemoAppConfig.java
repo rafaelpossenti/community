@@ -14,7 +14,10 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
@@ -23,7 +26,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 @EnableWebMvc // provides similar support to <mvc:annotation-driven>
 @ComponentScan(basePackages = "com.possenti.springsecurity.demo")
 @PropertySource("classpath:persistence-mysql.properties")
-public class DemoAppConfig {
+public class DemoAppConfig implements WebMvcConfigurer {
 
 	// set up variable to hold the properties
 	@Autowired
@@ -83,21 +86,32 @@ public class DemoAppConfig {
 
 	private static Properties getHibernateProperties() {
 
-        Properties hibernateProperties = new Properties();
-        hibernateProperties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
-        hibernateProperties.put("hibernate.show_sql", true);
-        hibernateProperties.put("hibernate.hbm2ddl.auto", "update");
-        hibernateProperties.put("hibernate.current_session_context_class", "thread");
-        hibernateProperties.put("show_sql", true);
+		Properties hibernateProperties = new Properties();
+		hibernateProperties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+		hibernateProperties.put("hibernate.show_sql", true);
+		hibernateProperties.put("hibernate.hbm2ddl.auto", "update");
+		hibernateProperties.put("hibernate.current_session_context_class", "thread");
+		hibernateProperties.put("show_sql", true);
 
-        return hibernateProperties;
-    }
-	
-	
+		return hibernateProperties;
+	}
+
 	private int getIntProperty(String propName) {
 		String propVal = env.getProperty(propName);
 		int intPropVal = Integer.parseInt(propVal);
 		return intPropVal;
+	}
+
+	// equivalents for <mvc:resources/> tags
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/").setCachePeriod(315569126);
+	}
+
+	// equivalent for <mvc:default-servlet-handler/> tag
+	@Override
+	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+		configurer.enable();
 	}
 
 }
