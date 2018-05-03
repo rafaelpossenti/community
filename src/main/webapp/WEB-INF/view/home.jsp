@@ -22,6 +22,11 @@
 	
 	<hr>
 	
+	<p>
+		<a href="${pageContext.request.contextPath}/showFormForAdd">showFormForAdd</a>
+	</p>
+		
+	
 	<security:authorize access="hasRole('MANAGER')"> 
 		<p>
 			<a href="${pageContext.request.contextPath}/leaders">LeaderShip Meeting</a> (Only for Manager peeps)
