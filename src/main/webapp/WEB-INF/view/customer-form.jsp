@@ -36,7 +36,7 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="${pageContext.request.contextPath}">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
@@ -44,11 +44,11 @@
           <li class="nav-item">
             <a class="nav-link disabled" href="#">Premium</a>
           </li>
-          <li class="nav-item dropdown">
+         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Functions</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="customer/list">List Customer</a>
-              <a class="dropdown-item" href="customer/showFormForAdd2">Customer</a>
+              <a class="dropdown-item" href="${pageContext.request.contextPath}/showFormForAdd"> Customer</a>
+
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </li>

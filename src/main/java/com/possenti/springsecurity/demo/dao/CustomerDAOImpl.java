@@ -28,12 +28,16 @@ public class CustomerDAOImpl implements CustomerDAO {
 		//get the current Hibernate session
 		Session currentSession = sessionFactory.getCurrentSession();
 		
+		Transaction trans = currentSession.beginTransaction();
+		
 		//create a query ... sort by last name
 		Query<Customer> query = currentSession.createQuery("from Customer order by lastName",
 															Customer.class);
 		
 		//execute query and get result list
 		List<Customer> customers = query.getResultList();
+		
+		trans.commit();
 		
 		//return the results 
 		return customers;
@@ -56,8 +60,12 @@ public class CustomerDAOImpl implements CustomerDAO {
 		//get the current hibernate session
 		Session currentSession = sessionFactory.getCurrentSession();
 		
+		Transaction trans = currentSession.beginTransaction();
+		
 		//retrieve/read from database using the primary key
 		Customer customer = currentSession.get(Customer.class,id);
+		
+		trans.commit();
 		
 		return customer;
 	}
