@@ -90,6 +90,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 		
 		// get the current hibernate session
         Session currentSession = sessionFactory.getCurrentSession();
+        Transaction trans = currentSession.beginTransaction();
         
         Query theQuery = null;
         
@@ -110,6 +111,8 @@ public class CustomerDAOImpl implements CustomerDAO {
         // execute query and get result list
         List<Customer> customers = theQuery.getResultList();
                 
+        trans.commit();
+        
         // return the results        
         return customers;
 	}
