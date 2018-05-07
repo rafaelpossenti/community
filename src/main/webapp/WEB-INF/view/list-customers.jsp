@@ -121,7 +121,8 @@
 		            <li><a href="#">2</a></li>
 		            <li><a href="#">3</a></li>
 		            <li class="next"><a href="#" rel="next">Próximo &gt;</a></li>
-		        </ul> -->
+		        </ul> 
+		        -->
  				
  				
  				<tag:paginate max="8" offset="${offset}" count="${count}" uri="list" next="&raquo;" previous="&laquo;" />

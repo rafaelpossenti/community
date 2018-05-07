@@ -46,8 +46,8 @@ public class CustomerDAOImpl implements CustomerDAO {
 	}
 	
 	//new method
-	@SuppressWarnings("unchecked")
-	@Transactional
+	
+	
 	public List<Customer> list(Integer offset,Integer maxResults) {
 		/*List<Customer> customers = sessionFactory.openSession()
 				.createCriteria(Customer.class)
@@ -150,8 +150,10 @@ public class CustomerDAOImpl implements CustomerDAO {
         }
         else {
             // theSearchName is empty ... so just get all customers
-            theQuery =currentSession.createQuery("from Customer", Customer.class);            
+            theQuery = currentSession.createQuery("from Customer", Customer.class);            
         }
+        
+		theQuery.setMaxResults(8);
         
         // execute query and get result list
         List<Customer> customers = theQuery.getResultList();

@@ -96,7 +96,7 @@ public class CustomerController {
 	
 	 @PostMapping("/search")
 	 public String searchCustomers(@RequestParam("searchName") String searchName,
-	                               Model model) {
+			 					   Model model) {
 
 		 // search customers from the service
 	     List<Customer> customers = customerService.searchCustomers(searchName);
