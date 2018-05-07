@@ -46,4 +46,14 @@ public class CustomerServiceImpl implements CustomerService{
 		  return customerDAO.searchCustomers(searchName);
 	}
 
+	@Override
+	public List<Customer> list(Integer offset, Integer maxResults) {
+		return customerDAO.list(offset,maxResults);
+	}
+
+	@Override
+	public Long count() {
+		return customerDAO.count();
+	}
+
 }

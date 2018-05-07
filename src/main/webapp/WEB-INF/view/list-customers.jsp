@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="tag" uri="/WEB-INF/taglibs/customTaglib.tld"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
@@ -32,9 +35,11 @@
   		<div id="navbar_menu" class="navbar-collapse collapse">
 	    	<ul class="nav navbar-nav navbar-right">
 	    		<li><a href="#">Home</a></li>
-	    		<li><a href="#">Options</a></li>
+	    		<li><a href="#">Village</a></li>
+	    		<li><a href="#">Member</a></li>
+	    		<li><a href="#">Task</a></li>
 	    		<li><a href="#">Perfil</a></li>
-	    		<li><a href="#">Help</a></li>
+	    		<li><a href="#">Logout</a></li>
 	   		</ul>
   		</div>
  	</div>
@@ -76,7 +81,7 @@
 		                    <th>First Name</th>
 		                    <th>Last Name</th>
 		                    <th>Email</th>
-		                    <th class="actions">Ações</th>
+		                    <th class="actions">AÃ§Ãµes</th>
                  		</tr>
             		</thead>
             		<tbody>
@@ -109,14 +114,18 @@
      	<div id="bottom" class="row">
     		<div class="col-md-12">
          
+		        <!--  
 		        <ul class="pagination">
 		            <li class="disabled"><a>&lt; Anterior</a></li>
 		            <li class="disabled"><a>1</a></li>
 		            <li><a href="#">2</a></li>
 		            <li><a href="#">3</a></li>
-		            <li class="next"><a href="#" rel="next">Próximo &gt;</a></li>
-		        </ul><!-- /.pagination -->
- 
+		            <li class="next"><a href="#" rel="next">PrÃ³ximo &gt;</a></li>
+		        </ul> -->
+ 				
+ 				
+ 				<tag:paginate max="8" offset="${offset}" count="${count}" uri="list" next="&raquo;" previous="&laquo;" />
+ 				
     		</div>
 		</div> <!-- /#bottom -->
 	 

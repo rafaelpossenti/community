@@ -92,7 +92,10 @@
             		</div>
 
             		<hr class="mb-4">
-            		<button class="btn btn-primary btn-lg btn-block" type="submit">Save</button>
+            		<button class="btn btn-primary btn-lg btn-block" type="submit" data-dismiss="alert">
+            			Save
+            		</button>
+            		
           		</form:form>
        	 	</div>
       	</div>

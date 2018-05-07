@@ -87,7 +87,7 @@ public class DemoAppConfig implements WebMvcConfigurer {
 	private static Properties getHibernateProperties() {
 
 		Properties hibernateProperties = new Properties();
-		hibernateProperties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+		hibernateProperties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
 		hibernateProperties.put("hibernate.show_sql", true);
 		hibernateProperties.put("hibernate.hbm2ddl.auto", "update");
 		hibernateProperties.put("hibernate.current_session_context_class", "thread");

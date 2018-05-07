@@ -21,7 +21,7 @@ public class CustomerController {
 	@Autowired
 	private CustomerService customerService;
 	
-	@GetMapping("/list")
+	/*@GetMapping("/list")
 	public String listCustomers(Model model) {
 		
 		//get customers from the Service
@@ -29,6 +29,17 @@ public class CustomerController {
 		
 		//add the customers to the model
 		model.addAttribute("customers",customers); //name,value
+		
+		return "list-customers";
+	}*/
+	
+	@GetMapping("/list")
+	public String listCustomers(Model model, Integer offset, Integer maxResults) {
+		
+		//add the customers to the model
+		model.addAttribute("customers", customerService.list(offset, maxResults));
+		model.addAttribute("count", customerService.count());
+		model.addAttribute("offset", offset);
 		
 		return "list-customers";
 	}
@@ -57,7 +68,7 @@ public class CustomerController {
 		customerService.saveCustomer(customer);
 		
 		
-		return "redirect:/customer/list";
+		return "redirect:/list";
 	}
 	
 	@GetMapping("/showFormForUpdate")
@@ -80,7 +91,7 @@ public class CustomerController {
 		customerService.deleteCustomer(id); 
 		
 		// send over to our form
-		return "redirect:/customer/list";
+		return "redirect:/list";
 	}
 	
 	 @PostMapping("/search")

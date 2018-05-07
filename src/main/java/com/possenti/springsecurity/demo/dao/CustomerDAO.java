@@ -15,4 +15,8 @@ public interface CustomerDAO {
 
 	public List<Customer> searchCustomers(String searchName);
 
+	public List<Customer> list(Integer offset, Integer maxResults);
+
+	public Long count();
+
 }
