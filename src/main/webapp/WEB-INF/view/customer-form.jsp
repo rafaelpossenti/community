@@ -34,9 +34,9 @@
   		</div>
   		<div id="navbar_menu" class="navbar-collapse collapse">
 	    	<ul class="nav navbar-nav navbar-right">
-	    		<li><a href="#">Home</a></li>
+	    		<li><a href="${pageContext.request.contextPath}/"">Home</a></li>
 	    		<li><a href="#">Village</a></li>
-	    		<li><a href="#">Member</a></li>
+	    		<li><a href="${pageContext.request.contextPath}/list">Member</a></li>
 	    		<li><a href="#">Task</a></li>
 	    		<li><a href="#">Perfil</a></li>
 	    		<li><a href="#">Logout</a></li>

@@ -3,6 +3,7 @@
 <%@ taglib prefix="tag" uri="/WEB-INF/taglibs/customTaglib.tld"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -14,9 +15,11 @@
 
  	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
+	
+	
 	
 </head>
 <body> 
@@ -31,7 +34,11 @@
 			    <span class="icon-bar"></span>
    			</button>
    			<a class="navbar-brand" href="#">Community</a>
+   			
   		</div>
+  		
+  		
+  		
   		<div id="navbar_menu" class="navbar-collapse collapse">
 	    	<ul class="nav navbar-nav navbar-right">
 	    		<li><a href="${pageContext.request.contextPath}/"">Home</a></li>
@@ -39,15 +46,22 @@
 	    		<li><a href="${pageContext.request.contextPath}/list">Member</a></li>
 	    		<li><a href="#">Task</a></li>
 	    		<li><a href="#">Perfil</a></li>
-	    		<li><a href="#">Logout</a></li>
+	    		<li>
+	    			<form:form action="${pageContext.request.contextPath}/logout" method="POST">
+						<input class="btn btn-lg btn-danger" type="submit" value="logout" />
+					</form:form>
+	    		
+	    		
+	    		</li>
 	   		</ul>
   		</div>
  	</div>
 	</nav>
 
+
 	<div id="main" class="container-fluid">
     	<div id="top" class="row">
-    		<h1 class="h2">Dashboard</h1>
+    		<h1 class="h2">Dashboard</h1> 
 	    </div> <!-- /#top -->
 		
 				    
@@ -63,12 +77,29 @@
   					<div id="chartContainer2" style="height: 300px; width: 100%;"></div>
   				</div>
 		</div> <!-- /#body -->
+ 	
+ 	
+ 		
+ 		<hr />
+ 		
+ 		<div class="row"> 	
+			<div class="col-md-8">
+				User: <security:authentication property="principal.username"/>
+				<br>
+				Role(s): <security:authentication property="principal.authorities"/>
+			</div>
+  			<div class="col-md-4">
+				<p>
+                	(47) 99678-6648 / rafael_possenti@hotmail.com.br <br>
+                    Cascavel/PR                
+                </p>
+                <p class="copy">© 2018 Todos os direitos reservados.</p >
+            </div>
+		</div>
+	</div>  <!-- /#main -->	
  			
-     	<div id="bottom" class="row">
     		
-		</div> <!-- /#bottom -->
 	 
-	 </div>  <!-- /#main -->
 	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -83,7 +114,7 @@
 			var chart = new CanvasJS.Chart("chartContainer", {
 				animationEnabled: true,
 				title:{
-					text: "Task Categories TEMPLATE",
+					text: "Villages TEMPLATE",
 					horizontalAlign: "left"
 				},
 				data: [{
@@ -107,7 +138,7 @@
 			var chart1 = new CanvasJS.Chart("chartContainer1", {
 				animationEnabled: true,
 				title:{
-					text: "Task Categories TEMPLATE",
+					text: "Members TEMPLATE",
 					horizontalAlign: "left"
 				},
 				data: [{
