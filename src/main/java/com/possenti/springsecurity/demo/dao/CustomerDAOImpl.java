@@ -109,7 +109,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 		
 		//retrieve/read from database using the primary key
 		Customer customer = currentSession.get(Customer.class,id);
-		
+		System.out.println("GET: " + customer);
 		trans.commit();
 		
 		return customer;

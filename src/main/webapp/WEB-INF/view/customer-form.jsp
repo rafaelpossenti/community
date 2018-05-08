@@ -56,8 +56,11 @@
      	<hr />
      	<div id="custom" class="row">
 			<form:form action="saveCustomer" modelAttribute="customer" method="POST">
+            	
+            	<form:hidden path="id"/>
+            	
             	<div class="row">
-              		<div class="col-md-6 mb-3">
+            		<div class="col-md-6 mb-3">
                	 		<label for="firstName">First name</label>
                		 	<form:input type="text" path="firstName"  class="form-control" placeholder="" value="" />
                 	</div>
