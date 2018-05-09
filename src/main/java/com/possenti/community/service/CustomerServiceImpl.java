@@ -1,4 +1,4 @@
-package com.possenti.springsecurity.demo.service;
+package com.possenti.community.service;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.possenti.springsecurity.demo.dao.CustomerDAO;
-import com.possenti.springsecurity.demo.entity.Customer;
+import com.possenti.community.dao.CustomerDAO;
+import com.possenti.community.entity.Customer;
 
 @Service
 public class CustomerServiceImpl implements CustomerService{

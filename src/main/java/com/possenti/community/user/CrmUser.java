@@ -1,4 +1,4 @@
-package com.possenti.springsecurity.demo.user;
+package com.possenti.community.user;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;

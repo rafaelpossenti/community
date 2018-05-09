@@ -1,4 +1,4 @@
-package com.possenti.springsecurity.demo.config;
+package com.possenti.community.config;
 
 import java.beans.PropertyVetoException;
 import java.util.Properties;
@@ -24,7 +24,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 @Configuration
 @EnableWebMvc // provides similar support to <mvc:annotation-driven>
-@ComponentScan(basePackages = "com.possenti.springsecurity.demo")
+@ComponentScan(basePackages = "com.possenti.community")
 @PropertySource("classpath:persistence-mysql.properties")
 public class DemoAppConfig implements WebMvcConfigurer {
 
@@ -79,7 +79,7 @@ public class DemoAppConfig implements WebMvcConfigurer {
 	public LocalSessionFactoryBean sessionFactory() {
 		LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 		sessionFactory.setDataSource(securityDataSource());
-		sessionFactory.setPackagesToScan(new String[] { "com.possenti.springsecurity.demo.entity" });
+		sessionFactory.setPackagesToScan(new String[] { "com.possenti.community.entity" });
 		sessionFactory.setHibernateProperties(getHibernateProperties());
 		return sessionFactory;
 	}

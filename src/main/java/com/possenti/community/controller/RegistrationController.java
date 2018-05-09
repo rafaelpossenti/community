@@ -1,4 +1,4 @@
-package com.possenti.springsecurity.demo.controller;
+package com.possenti.community.controller;
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.possenti.springsecurity.demo.user.CrmUser;
+import com.possenti.community.user.CrmUser;
 
 @Controller
 @RequestMapping("/register")

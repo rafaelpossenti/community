@@ -1,8 +1,8 @@
-package com.possenti.springsecurity.demo.dao;
+package com.possenti.community.dao;
 
 import java.util.List;
 
-import com.possenti.springsecurity.demo.entity.Customer;
+import com.possenti.community.entity.Customer;
 
 public interface CustomerDAO {
 	public List<Customer> getCustomers();

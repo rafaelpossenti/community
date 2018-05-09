@@ -6,7 +6,7 @@
  
   <tag>
     <name>paginate</name>
-    <tag-class>com.possenti.springsecurity.demo.taglib.PaginationTaglib</tag-class>
+    <tag-class>com.possenti.community.taglib.PaginationTaglib</tag-class>
     <body-content>empty</body-content>
     
     <attribute>

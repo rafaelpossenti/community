@@ -1,4 +1,4 @@
-package com.possenti.springsecurity.demo.entity;
+package com.possenti.community.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

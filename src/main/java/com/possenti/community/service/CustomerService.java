@@ -1,8 +1,8 @@
-package com.possenti.springsecurity.demo.service;
+package com.possenti.community.service;
 
 import java.util.List;
 
-import com.possenti.springsecurity.demo.entity.Customer;
+import com.possenti.community.entity.Customer;
 
 public interface CustomerService {
 	public List<Customer> getCustomers();

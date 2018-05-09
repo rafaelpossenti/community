@@ -1,4 +1,4 @@
-package com.possenti.springsecurity.demo.controller;
+package com.possenti.community.controller;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.possenti.springsecurity.demo.entity.Customer;
-import com.possenti.springsecurity.demo.service.CustomerService;
+import com.possenti.community.entity.Customer;
+import com.possenti.community.service.CustomerService;
 
 @Controller
 public class CustomerController {

@@ -1,4 +1,4 @@
-package com.possenti.springsecurity.demo.taglib;
+package com.possenti.community.taglib;
 
 import java.io.Writer;
 

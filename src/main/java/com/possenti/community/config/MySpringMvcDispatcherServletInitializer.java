@@ -1,4 +1,4 @@
-package com.possenti.springsecurity.demo.config;
+package com.possenti.community.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

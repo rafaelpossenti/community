@@ -1,4 +1,4 @@
-package com.possenti.springsecurity.demo.dao;
+package com.possenti.community.dao;
 
 
 import java.util.List;
@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.possenti.springsecurity.demo.entity.Customer;
+import com.possenti.community.entity.Customer;
 
 @Repository //always apply to DAO implementation
 public class CustomerDAOImpl implements CustomerDAO {
