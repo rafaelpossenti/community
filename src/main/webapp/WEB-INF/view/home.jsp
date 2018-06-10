@@ -44,7 +44,7 @@
 	    		<li><a href="${pageContext.request.contextPath}/"">Home</a></li>
 	    		<li><a href="#">Village</a></li>
 	    		<li><a href="${pageContext.request.contextPath}/list">Member</a></li>
-	    		<li><a href="#">Task</a></li>
+	    		<li><a href="${pageContext.request.contextPath}/listTask">Task</a></li>
 	    		<li><a href="#">Perfil</a></li>
 	    		<li>
 	    			<form:form action="${pageContext.request.contextPath}/logout" method="POST">
