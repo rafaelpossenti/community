@@ -1,4 +1,4 @@
-package com.possenti.community.config;
+package com.possenti.cgs.config;
 
 import javax.sql.DataSource;
 

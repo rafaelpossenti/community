@@ -1,4 +1,4 @@
-package com.possenti.community.controller;
+package com.possenti.cgs.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

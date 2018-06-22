@@ -1,4 +1,4 @@
-package com.possenti.community.controller;
+package com.possenti.cgs.controller;
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.possenti.community.user.CrmUser;
+import com.possenti.cgs.user.UserSystem;
 
 @Controller
 @RequestMapping("/register")
@@ -47,7 +47,7 @@ public class RegistrationController {
 	@GetMapping("/showRegistrationForm")
 	public String showMyLoginPage(Model theModel) {
 		
-		theModel.addAttribute("crmUser", new CrmUser());
+		theModel.addAttribute("crmUser", new UserSystem());
 		
 		return "registration-form";
 		
@@ -55,7 +55,7 @@ public class RegistrationController {
 
 	@PostMapping("/processRegistrationForm")
 	public String processRegistrationForm(
-				@Valid @ModelAttribute("crmUser") CrmUser theCrmUser, 
+				@Valid @ModelAttribute("crmUser") UserSystem theCrmUser, 
 				BindingResult theBindingResult, 
 				Model theModel) {
 						
@@ -66,7 +66,7 @@ public class RegistrationController {
 		// form validation
 		if (theBindingResult.hasErrors()) {
 
-			theModel.addAttribute("crmUser", new CrmUser());
+			theModel.addAttribute("crmUser", new UserSystem());
 			theModel.addAttribute("registrationError", "User name/password can not be empty.");
 
 			logger.warning("User name/password can not be empty.");
@@ -78,7 +78,7 @@ public class RegistrationController {
 		boolean userExists = doesUserExist(userName);
 		
 		if (userExists) {
-			theModel.addAttribute("crmUser", new CrmUser());
+			theModel.addAttribute("crmUser", new UserSystem());
 			theModel.addAttribute("registrationError", "User name already exists.");
 
 			logger.warning("User name already exists.");

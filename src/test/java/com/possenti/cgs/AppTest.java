@@ -1,4 +1,4 @@
-package com.possenti.community;
+package com.possenti.cgs;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

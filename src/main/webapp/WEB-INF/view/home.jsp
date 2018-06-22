@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="tag" uri="/WEB-INF/taglibs/customTaglib.tld"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
@@ -11,7 +10,7 @@
 	<meta charset="utf-8">
  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
  	<meta name="viewport" content="width=device-width, initial-scale=1">
- 	<title>Community</title>
+ 	<title>CGS</title>
 
  	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -33,7 +32,7 @@
 			    <span class="icon-bar"></span>
 			    <span class="icon-bar"></span>
    			</button>
-   			<a class="navbar-brand" href="#">Community</a>
+   			<a class="navbar-brand" href="#">CGS</a>
    			
   		</div>
   		
@@ -106,85 +105,6 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	
-	 <!-- Graphs -->
-    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-
-	<script type="text/javascript">
-		window.onload = function () {
-			var chart = new CanvasJS.Chart("chartContainer", {
-				animationEnabled: true,
-				title:{
-					text: "Villages TEMPLATE",
-					horizontalAlign: "left"
-				},
-				data: [{
-					type: "doughnut",
-					indexLabelFontSize: 10,
-					indexLabel: "{label} - #percent%",
-					toolTipContent: "<b>{label}:</b> {y} (#percent%)",
-					dataPoints: [
-						{  y: 418, label: "Vollunter" },
-						{  y: 217, label: "IT" },
-						{  y: 312, label: "Construction" },
-						{  y: 117, label: "Agriculture"},
-						{  y: 172, label: "HouseKepper" },
-						{  y: 430, label: "Cleaner"},
-						{  y: 171, label: "Parties"}
-					]
-				}]
-			});
-			chart.render();
-			
-			var chart1 = new CanvasJS.Chart("chartContainer1", {
-				animationEnabled: true,
-				title:{
-					text: "Members TEMPLATE",
-					horizontalAlign: "left"
-				},
-				data: [{
-					type: "doughnut",
-					indexLabelFontSize: 10,
-					indexLabel: "{label} - #percent%",
-					toolTipContent: "<b>{label}:</b> {y} (#percent%)",
-					dataPoints: [
-						{  y: 418, label: "Vollunter" },
-						{  y: 217, label: "IT" },
-						{  y: 312, label: "Construction" },
-						{  y: 117, label: "Agriculture"},
-						{  y: 172, label: "HouseKepper" },
-						{  y: 430, label: "Cleaner"},
-						{  y: 171, label: "Parties"}
-					]
-				}]
-			});
-			chart1.render();
-			
-			var chart2 = new CanvasJS.Chart("chartContainer2", {
-				animationEnabled: true,
-				title:{
-					text: "Task Categories TEMPLATE",
-					horizontalAlign: "left"
-				},
-				data: [{
-					type: "doughnut",
-					indexLabelFontSize: 10,
-					indexLabel: "{label} - #percent%",
-					toolTipContent: "<b>{label}:</b> {y} (#percent%)",
-					dataPoints: [
-						{  y: 418, label: "Vollunter" },
-						{  y: 217, label: "IT" },
-						{  y: 312, label: "Construction" },
-						{  y: 117, label: "Agriculture"},
-						{  y: 172, label: "HouseKepper" },
-						{  y: 430, label: "Cleaner"},
-						{  y: 171, label: "Parties"}
-					]
-				}]
-			});
-			chart2.render();
-		}
-	</script>
-
 		
 		
 </body>

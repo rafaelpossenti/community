@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.possenti</groupId>
-	<artifactId>community</artifactId>
+	<artifactId>CGS</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
 
-	<name>community</name>
+	<name>CGS</name>
 
 	<properties>
 		<springframework.version>5.0.5.RELEASE</springframework.version>
@@ -118,7 +118,7 @@
 
 	<!-- TO DO: Add support for Maven WAR Plugin -->
 	<build>
-		<finalName>community</finalName>
+		<finalName>CGS</finalName>
 		<pluginManagement>
 			<plugins>
 				<plugin>
